@@ -1,0 +1,23 @@
+{
+  "name": "crm-serious-games",
+  "version": "1.0.0",
+  "description": "Simple CRM for tracking serious game leads through the sales funnel",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "express": "^4.21.2",
+    "pg": "^8.13.1"
+  },
+  "optionalDependencies": {
+    "@electric-sql/pglite": "^0.2.17"
+  }
+}

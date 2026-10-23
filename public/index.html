@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Serious Games CRM</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232a78d6'/%3E%3Cpath d='M8 9h16l-6 8v6l-4 2v-8z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <div id="login" class="login" hidden></div>
+
+  <div id="app" class="shell" hidden>
+    <aside class="sidebar">
+      <a class="brand" href="#/dashboard">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Serious Games <b>CRM</b></span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#/dashboard" data-nav="dashboard"><i data-icon="home"></i><span>Dashboard</span></a>
+        <a href="#/pipeline" data-nav="pipeline"><i data-icon="columns"></i><span>Pipeline</span></a>
+        <a href="#/deals" data-nav="deals"><i data-icon="list"></i><span>Deals</span></a>
+        <a href="#/contacts" data-nav="contacts"><i data-icon="user"></i><span>Contacts</span></a>
+        <a href="#/organizations" data-nav="organizations"><i data-icon="building"></i><span>Organizations</span></a>
+        <a href="#/tasks" data-nav="tasks"><i data-icon="check"></i><span>Tasks</span><em id="task-badge" hidden></em></a>
+        <a href="#/settings" data-nav="settings"><i data-icon="settings"></i><span>Settings</span></a>
+      </nav>
+      <div class="sidebar-foot">
+        <div class="me" id="me"></div>
+        <button class="btn ghost small" id="logout">Log out</button>
+      </div>
+    </aside>
+
+    <div class="main-wrap">
+      <header class="topbar">
+        <div class="search">
+          <i data-icon="search"></i>
+          <input id="global-search" type="search" placeholder="Search deals, contacts, organizations…" autocomplete="off">
+          <div id="search-results" class="search-results" hidden></div>
+        </div>
+        <button class="btn primary" id="new-lead"><i data-icon="plus"></i><span>New lead</span></button>
+      </header>
+      <main id="main" class="main"></main>
+    </div>
+  </div>
+
+  <dialog id="modal" class="modal"></dialog>
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+  <div id="tip" class="tip" hidden></div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
